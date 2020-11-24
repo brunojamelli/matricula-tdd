@@ -1,7 +1,6 @@
 #Regras para os estudantes
 
 Regras de negócio:
-
     - Se um aluno desejar se matricular em uma turma, e ainda houverem vagas na turma, 
     sua matrícula será realizada com sucesso, e ele receberá a mensagem: "Matriculado com sucesso"
 
