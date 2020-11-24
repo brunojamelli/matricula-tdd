@@ -1,0 +1,16 @@
+#Regras para os estudantes
+
+Regras de negócio:
+
+    - Se um aluno desejar se matricular em uma turma, e ainda houverem vagas na turma, 
+    sua matrícula será realizada com sucesso, e ele receberá a mensagem: "Matriculado com sucesso"
+
+    - Se um aluno desejar se matricular em uma turma, e não houverem vagas na turma, sua matrícula não 
+    será realizada com sucesso, e ele receberá a mensagem: "Não foi matriculado, turma sem vagas"
+
+    - O sistema poderá mostrar o percentual de alunos aprovados
+    em uma turma, sempre arredondando para 1 casa decimal.
+
+    - Alunos com média ponderada (pesos 4,5,6) maior ou igual a 7, são aprovados na disciplina.
+
+    - Alunos com média ponderada (pesos 4,5,6) menor que 7, são reprovados na disciplina.
