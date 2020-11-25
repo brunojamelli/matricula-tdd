@@ -11,10 +11,17 @@ describe('Testes de matriculas na turma', () => {
     })
 
     it('matricula na turma que não tem mais vagas', () => {
-        const param = new moduleStudent.Student("John", 12);
-        const turma = new moduleClassDiscipline.ClassDiscipline(20);
-    
-        expect(turma.registration(param)).toEqual("Não foi matriculado, turma sem vagas");
+        const obj1 = new moduleStudent.Student("John", 2000);
+        const obj2 = new moduleStudent.Student("Stuart", 2001);
+        const obj3 = new moduleStudent.Student("Conoly", 2002);
+        const obj4 = new moduleStudent.Student("Bruno", 1997);
+
+        const turma = new moduleClassDiscipline.ClassDiscipline(3);
+        turma.registration(obj1);        
+        turma.registration(obj2);        
+        turma.registration(obj3);        
+
+        expect(turma.registration(obj4)).toEqual("Não foi matriculado, turma sem vagas");
     })
 })
 
