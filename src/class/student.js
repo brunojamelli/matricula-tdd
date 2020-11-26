@@ -1,12 +1,15 @@
 class Student {
-    constructor(name, birthYear) {
-        this.name = name,
-        this.birthYear = birthYear
+    constructor(name, birthYear, notes = [], weights = []) {
+        this.name = name;
+        this.birthYear = birthYear;
+        this.notes = notes;
+        this.weights = weights;
+        this.average = ((this.notes[0] * this.weights[0]) + (this.notes[1] * this.weights[1]) + (this.notes[2] * this.weights[2])) / this.weights.reduce((a, b) => a + b, 0);
     }
-    weightedAverage(notes, weights){
-        const average = ((notes[0] * weights[0]) + (notes[1] * weights[1]) + (notes[2] * weights[2])) / weights.reduce((a, b) => a + b, 0);
-        return (average >= 7) ? "aprovado" : "reprovado";
+    weightedAverage() {
+        return (this.average >= 7) ? "aprovado" : "reprovado";
     }
+    
 }
 module.exports = {
     Student

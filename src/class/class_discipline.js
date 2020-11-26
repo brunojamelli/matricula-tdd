@@ -8,9 +8,14 @@ class ClassDiscipline {
             this.students.push(student);
             this.limit--;
             return "Matriculado com sucesso";
-        }else {
+        } else {
             return "Não foi matriculado, turma sem vagas";
         }
+    }
+    percentageApproved() {
+        let aproveds = this.students.filter(el => el.average > 7);
+        let percentage = (aproveds.length*100) / this.students.length;
+        return Math.round(percentage,1) ;
     }
 }
 
